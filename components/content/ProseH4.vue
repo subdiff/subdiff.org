@@ -1,0 +1,21 @@
+<template>
+  <h4 class="header" :id="id">
+    <a class="has-text-black-bis"
+      v-if="id && generate"
+      :href="`#${id}`"
+    >
+      <img class="header-icon" src="~/assets/link.png" alt="link" />
+      <slot />
+    </a>
+    <slot v-else />
+  </h4>
+</template>
+
+<script setup lang="ts">
+import { computed, useRuntimeConfig } from '#imports'
+
+const props = defineProps<{ id?: string }>()
+
+const { headings } = useRuntimeConfig().public.mdc
+const generate = computed(() => props.id && headings?.anchorLinks?.h4)
+</script>
