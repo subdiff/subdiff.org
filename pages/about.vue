@@ -29,8 +29,10 @@
                 <NuxtLink href="https://www.linkedin.com/in/roman-gilg" target="_blank">LinkedIn</NuxtLink>
               </li>
               <li>
-                on IRC freenode:
-                <i>romangg</i>
+                <NuxtLink href="https://matrix.to/#/@romangg:matrix.org" target="_blank">Matrix</NuxtLink>
+              </li>
+              <li>
+                on <NuxtLink href="https://libera.chat/" target="_blank">Libera.Chat</NuxtLink>: <i>romangg</i>
               </li>
             </ul>
           </div>
