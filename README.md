@@ -1,42 +1,11 @@
-# Content v2 Minimal Starter
+# subdiff.org Website Source
 
-Look at the [Content documentation](https://content-v2.nuxtjs.org/) to learn more.
+Created with [Nuxt Content](https://content.nuxt.com/). Static version of this page is hosted on a separate server.
 
-## Setup
+## Workflow
 
-Make sure to install the dependencies:
-
-```bash
-# yarn
+```
 yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install
+yarn dev
+yarn generate
 ```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/docs/deployment) for more information.
