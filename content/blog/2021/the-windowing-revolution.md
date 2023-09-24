@@ -123,14 +123,14 @@ a general plan that I published in an [issue ticket][windowing-overview-task].
 You can see that my primary focus was to simplify the sprawling hierarchy of different window types,
 which have grown in numbers over the years mostly because of the Wayland changes.
 
-:img-cap{src="assets/2021-02-08-pre-simplified.png" cap="The old windows hierarchy." capMargin='10px'}
+:img-cap{src="assets/2021-02-08-pre-simplified.png" cap="The old windows hierarchy."}
 
 My first idea was to flatten the hierarchy through the use of C++ templates
 and replacing [inheritance with composition][composition-over-inheritance].
 And while not yet fully finished,
 the current state absolutely reaffirms my decision to follow through with this idea.
 
-:img-cap{src="assets/2021-02-08-current-simplified.png" cap="The new windows hierarchy." capMargin='10px'}
+:img-cap{src="assets/2021-02-08-current-simplified.png" cap="The new windows hierarchy."}
 
 The classes `AbstractClient` and `XwaylandClient`,
 which represented different kinds of windows,

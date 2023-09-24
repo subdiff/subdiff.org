@@ -48,7 +48,7 @@ Child windows on the other hand can be further [partitioned][x11-create-window],
 [ordered][x11-stack-window]
 and even [switch nodes][x11-reparent-window] in the tree.
 
-:img-cap{src="assets/2021-02-19-child.png" cap='VLC playing a video in another child window.' cap-margin='-30px'}
+:img-cap{src="assets/2021-02-19-child.png" cap='VLC playing a video in another child window.' effect='shadow'}
 
 While the details of that windowing logic can become complex very quickly,
 I think the general idea behind the window tree itself is simple to grasp.
@@ -88,7 +88,7 @@ Transient windows in general come as toplevel windows.
 Seen as part of the window tree,
 they are *siblings* of the window they are *transient for*.
 
-:img-cap{src="assets/2021-02-19-transient.png" cap='Dialog as a transient window for the Kate window.'}
+:img-cap{src="assets/2021-02-19-transient.png" cap='Dialog as a transient window for the Kate window.' effect='shadow'}
 
 Typical examples of such are dialog windows,
 shown when your application asks you if you *really* want to do what you just tried to do.
@@ -333,8 +333,7 @@ But their real power comes with views
 that use different buffer configurations,
 for example the video view of a media player and other controls around it.
 
-:img-cap{src="assets/2021-02-19-subsurfaces.png" cap="Weston provides demos like this one,
-which tests subsurfaces."}
+:img-cap{src="assets/2021-02-19-subsurfaces.png" cap='Weston provides demos like this one, which tests subsurfaces.' effect='shadow'}
 
 We talked a lot about language when we looked at X11.
 The situation is much better on Wayland.

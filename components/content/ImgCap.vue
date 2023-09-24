@@ -1,12 +1,23 @@
 <template>
   <div class="center">
-    <img :src="src" :alt="getAlt" />
-    <p :style="{ 'margin-top': props.capMargin }">{{ props.cap }}</p>
+    <p>
+      <img :class="getImageClass" :src="src" :alt="getAlt" />
+    </p>
+    <p>{{ props.cap }}</p>
   </div>
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{ src: string, cap: string, alt?: string, capMargin?: string }>()
+const props = defineProps<{ src: string, cap: string, alt?: string, effect?: string }>()
+
+const getImageClass = computed(() => {
+  if (!props.effect) {
+    return 'img-cap-no-effect'
+  }
+  if (props.effect == 'shadow') {
+    return 'img-cap-shadow'
+  }
+})
 
 const getAlt = computed(() => {
   if (props.alt) {
@@ -25,4 +36,9 @@ const getAlt = computed(() => {
   margin-bottom: 25px
   margin-left: 30px
   margin-right: 30px
+.img-cap-no-effect
+  max-height: 600px
+.img-cap-shadow
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2)
+  max-height: 600px
 </style>
