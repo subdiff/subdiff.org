@@ -1,6 +1,11 @@
 <template>
   <div class="center">
-    <p>
+    <p v-if="props.href">
+      <NuxtLink target="_blank" :href="props.href">
+        <img :class="getImageClass" :src="src" :alt="getAlt" />
+      </NuxtLink>
+    </p>
+    <p v-if="!props.href">
       <img :class="getImageClass" :src="src" :alt="getAlt" />
     </p>
     <p>{{ props.cap }}</p>
@@ -8,7 +13,7 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps<{ src: string, cap: string, alt?: string, effect?: string }>()
+const props = defineProps<{ src: string, cap: string, alt?: string, effect?: string, href?: string }>()
 
 const getImageClass = computed(() => {
   if (!props.effect) {

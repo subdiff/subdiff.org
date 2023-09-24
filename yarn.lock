@@ -4624,6 +4624,11 @@ pretty-bytes@^6.1.1:
   resolved "https://registry.yarnpkg.com/pretty-bytes/-/pretty-bytes-6.1.1.tgz#38cd6bb46f47afbf667c202cfc754bffd2016a3b"
   integrity sha512-mQUvGU6aUFQ+rNvTIAcZuWGRT9a6f6Yrg9bHs4ImKF+HZCEK+plBvnAZYSIQztknZF2qnzNtr6F8s0+IuptdlQ==
 
+primevue@^3.34.1:
+  version "3.34.1"
+  resolved "https://registry.yarnpkg.com/primevue/-/primevue-3.34.1.tgz#2f95428424d7805bd49cbea75707862988b8427d"
+  integrity sha512-5QPy8I+TMYSQgC0Bs/9vINsOVjgCOQFAr6uz49Wzcj8u04qJ2mG/z6OhAana+f4yKTTHVwHLVnuGkrIp/nI9DA==
+
 process-nextick-args@~2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"

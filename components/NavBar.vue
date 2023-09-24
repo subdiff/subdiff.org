@@ -136,7 +136,7 @@ onMounted(() => {
   top: 0
   width: 100%
   transition: .5s
-  z-index: 1
+  z-index: 11
 
 .header-shadow
   box-shadow: 0 0 8px rgba(0, 0, 0, .5)
@@ -147,11 +147,11 @@ onMounted(() => {
   background-color: white
   overflow: auto
   position: relative
-  z-index: 2
+  z-index: 12
 
 .menu-style
   position: relative
-  z-index: 0
+  z-index: 10
 
 .nav-item
   outline: none

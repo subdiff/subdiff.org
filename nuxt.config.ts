@@ -21,5 +21,11 @@ export default defineNuxtConfig({
         { rel: "icon", type: "image/png", href: "/logo.png" }
       ]
     }
+  },
+  css: [
+    "primevue/resources/themes/lara-light-blue/theme.css"
+  ],
+  build: {
+    transpile: ["primevue"]
   }
 })
