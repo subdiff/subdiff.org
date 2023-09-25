@@ -9,7 +9,9 @@
               <div v-if="(!scrolledDown || dropDownActive) && upButtonCleanedUp" class="column">
                 <div style="display: inline-block">
                   <NuxtLink class="nav-link" href="/">
-                    <div v-show="allMounted && !scrolledDownAtStart" class="subtitle is-6 nav-item">subdiff.org</div>
+                    <div v-show="allMounted && (!scrolledDown || dropDownActive)" class="subtitle is-6 nav-item">
+                      subdiff.org
+                    </div>
                   </NuxtLink>
                 </div>
               </div>
@@ -94,6 +96,8 @@ let dropDownMenuCleanedUp = ref(true)
 const dropDownAvail = computed(() => {
   return windowWidth.value < 380 || scrolledDown.value
 })
+
+useRouter().options.scrollBehavior = customScrollBehavior
 
 const onScroll = () => {
   hideDropDownMenu();

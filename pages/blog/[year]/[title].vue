@@ -129,9 +129,6 @@ const disqusPageConfig = () => {
   margin-bottom: -20px
 
 :deep(.deep-selector)
-  .header
-    margin-top: -60px
-    padding-top: 80px
   .header-icon
     height: 16px
     width: 16px
