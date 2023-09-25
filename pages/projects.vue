@@ -1,6 +1,6 @@
 <template>
   <section class="container default-layout">
-    <Accordion :activeIndex="0">
+    <Accordion :activeIndex="getActiveIndex()" @tab-open="({ index }) => selectedProject = getProjectName(index)">
       <AccordionTab v-for="project in data" :key="project.name" :header="project.name">
         <ProjectCard :prjData="project" />
       </AccordionTab>
@@ -27,6 +27,33 @@ if (!data.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found', fatal: true })
 }
 
+const router = useRouter()
+const selectedProject = ref('')
+watch(selectedProject, (selectedProject, previous) => {
+  router.push({
+    path: '/projects',
+    query: { project: selectedProject },
+  })
+})
+
+const getProjectName = (index: number) => {
+  if (index < 0 || index > data.value!.length) {
+    return ''
+  }
+  const path = data.value!.at(index)!._path!
+  return path.slice(path.lastIndexOf('/') + 1)
+}
+
+const getActiveIndex = () => {
+  const route = useRoute()
+  for (let i = 0; i < data.value!.length; i++) {
+    if (getProjectName(i) === route.query.project) {
+      return i
+    }
+  }
+
+  return 0
+}
 </script>
 
 <style lang="sass" scoped>
