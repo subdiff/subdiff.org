@@ -80,7 +80,7 @@
 </template>
 
 <script setup lang="ts">
-let windowWidth = 1024
+let windowWidth = ref(1024)
 let scrolledDown = ref(false)
 let scrolledDownAtStart = ref(false)
 let allMounted = false
@@ -92,7 +92,7 @@ let dropDownCleanedUp = ref(true)
 let dropDownMenuCleanedUp = ref(true)
 
 const dropDownAvail = computed(() => {
-  return windowWidth < 380 || scrolledDown.value
+  return windowWidth.value < 380 || scrolledDown.value
 })
 
 const onScroll = () => {
@@ -101,7 +101,7 @@ const onScroll = () => {
 }
 const onResize = () => {
   // alternative: document.documentElement.scrollTop
-  windowWidth = window.innerWidth;
+  windowWidth.value = window.innerWidth;
 }
 const isScrolledDown = () => {
   return window.scrollY > 10;
@@ -123,6 +123,7 @@ onMounted(() => {
     // executed when all children have been mounted as well
     scrolledDownAtStart.value = isScrolledDown();
     scrolledDown.value = scrolledDownAtStart.value;
+    windowWidth.value = window.innerWidth
     allMounted = true;
   })
 })
