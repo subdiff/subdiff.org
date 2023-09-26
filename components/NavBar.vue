@@ -1,5 +1,5 @@
 <template>
-  <div v-click-outside="hideDropDownMenu" class="header-style"
+  <header v-click-outside="hideDropDownMenu" class="header-style"
     :class="{ 'header-shadow': scrolledDown || dropDownActive }">
     <nav class="default-layout container">
       <div class="columns is-gapless is-variable is-multiline is-vcentered bar-style is-mobile">
@@ -78,7 +78,7 @@
         </div>
       </Transition>
     </nav>
-  </div>
+  </header>
 </template>
 
 <script setup lang="ts">
