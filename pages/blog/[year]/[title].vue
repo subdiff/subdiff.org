@@ -23,7 +23,7 @@
       <section class="section post-content content deep-selector is-size-5 is-size-6-mobile">
         <ContentRenderer :value="data" />
       </section>
-      <section class="section disqus-box">
+      <section v-if="!data!.draft" class="section disqus-box">
         <ClientOnly fallback-tag="span" fallback="Loading comments...">
           <Disqus shortname="subdiff" :pageConfig="disqusPageConfig()" :key="data!.path" />
         </ClientOnly>
