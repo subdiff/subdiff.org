@@ -10,6 +10,14 @@ export default defineNuxtConfig({
     markdown: {
       remarkPlugins: ['remark-reading-time'],
     },
+    highlight: {
+      theme: 'github-light',
+      preload: [
+        'c',
+        'cpp',
+        'yaml',
+      ],
+    },
   },
   plugins: ['~/plugins/click-outside.client.ts',
     '~/plugins/scroll-to.client.ts',
