@@ -45,23 +45,22 @@ const imgPath = route.path + '.jpg'
 
 useHead({
   title: data.value.title + ' | subdiff.org Blog',
-  meta: [
-    {
-      name: "description",
-      content: data.value!.description
-    }
-  ].concat(getSocialMeta(
-    "https://subdiff.org" + route.fullPath!,
-    data.value.title!,
-    data.value!.description,
-    {
+  meta: getSocialMeta({
+    url: "https://subdiff.org" + route.fullPath!,
+    title: data.value.title!,
+    descr: data.value!.description,
+    type: 'article',
+    author: 'Roman Gilg',
+    date: data.value!.date,
+    img: {
       url: "https://subdiff.org" + imgPath,
-      alt: "post header",
-      type: "image/jpg",
+      alt: "article header",
+      type: "jpg",
       width: undefined,
-      height: undefined
+      height: undefined,
+      is_large: true,
     }
-  ))
+  })
 })
 
 definePageMeta({

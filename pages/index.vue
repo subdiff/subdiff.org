@@ -55,17 +55,18 @@
 <script setup lang="ts">
 useHead({
   title: 'subdiff : software systems',
-  meta: getSocialMeta(
-    'https://subdiff.org',
-    'subdiff : software systems',
-    'Welcome to subdiff : software system',
-    {
+  meta: getSocialMeta({
+    url: 'https://subdiff.org',
+    title: 'subdiff : software systems',
+    descr: 'co-creating essential open source graphics technology',
+    img: {
       url: 'https://subdiff.org/logo.png',
-      alt: "post header",
-      type: "image/png",
+      alt: "subdiff logo",
+      type: "png",
       width: undefined,
-      height: undefined
+      height: undefined,
     }
+  }
   )
 })
 

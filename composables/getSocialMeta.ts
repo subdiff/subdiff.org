@@ -1,56 +1,79 @@
-export const getSocialMeta = (url: string, title: string, descr: string, img: any) => {
+export const getSocialMeta = (
+    {
+        url,
+        title,
+        descr,
+        type,
+        author,
+        date,
+        img = {
+            url: string,
+            alt: string,
+            type: string,
+            width: number,
+            height: number,
+            is_large: boolean,
+        },
+    } = {}
+) => {
     return [
         {
-            name: 'og:url',
+            property: 'og:url',
             content: url
         },
         {
-            name: 'og:type',
-            content: 'website'
+            property: 'og:type',
+            content: type ? type : 'website'
         },
         {
-            name: 'og:title',
+            property: 'og:title',
             content: title
         },
         {
-            name: 'og:description',
+            name: 'description',
+            property: 'og:description',
             content: descr
-        },
-        {
-            name: 'og:image',
-            content: img.url
-        },
-        {
-            name: 'og:image:alt',
-            content: img.alt
-        },
-        {
-            name: 'og:image:type',
-            content: img.type
-        },
-        {
-            name: 'og:image:width',
-            content: img.width
-        },
-        {
-            name: 'og:image:height',
-            content: img.height
-        },
-        {
-            name: 'twitter:card',
-            content: 'summary_large_image'
-        },
-        {
-            name: 'twitter:image',
-            content: img.url
-        },
-        {
-            name: 'twitter:image:alt',
-            content: img.alt
         },
         {
             name: 'twitter:description',
             content: descr
+        },
+        {
+            name: 'author',
+            property: 'article:author',
+            content: author
+        },
+        {
+            property: 'article:published_time',
+            content: date
+        },
+        {
+            property: 'og:image',
+            content: img.url
+        },
+        {
+            property: 'og:image:alt',
+            content: img.alt
+        },
+        {
+            property: 'og:image:type',
+            content: 'image/' + img.type
+        },
+        {
+            property: 'og:image:width',
+            content: img.width
+        },
+        {
+            property: 'og:image:height',
+            content: img.height
+        },
+        {
+            name: 'twitter:card',
+            content: img.is_large ? 'summary_large_image' : 'summary'
+        },
+        {
+            name: 'twitter:site',
+            content: '@subdiff',
         }
     ]
 }
