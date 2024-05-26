@@ -9,20 +9,20 @@ importers:
   .:
     dependencies:
       primevue:
-        specifier: ^3.34.1
+        specifier: ^3.52.0
         version: 3.52.0(vue@3.4.27)
     devDependencies:
       '@nuxt/content':
-        specifier: ^2.8.2
+        specifier: ^2.12.1
         version: 2.12.1(ioredis@5.4.1)(nuxt@3.11.2(@opentelemetry/api@1.8.0)(@parcel/watcher@2.4.1)(@types/node@20.12.12)(@unocss/reset@0.60.3)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(sass@1.77.2)(terser@5.31.0)(unocss@0.60.3(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.11(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0)))(vite@5.2.11(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0)))(rollup@4.18.0)(vue@3.4.27)
       bulma:
         specifier: ^0.9.4
         version: 0.9.4
       luxon:
-        specifier: ^3.4.3
+        specifier: ^3.4.4
         version: 3.4.4
       nuxt:
-        specifier: ^3.7.3
+        specifier: ^3.11.2
         version: 3.11.2(@opentelemetry/api@1.8.0)(@parcel/watcher@2.4.1)(@types/node@20.12.12)(@unocss/reset@0.60.3)(encoding@0.1.13)(floating-vue@5.2.2(@nuxt/kit@3.11.2(rollup@4.18.0))(vue@3.4.27))(ioredis@5.4.1)(rollup@4.18.0)(sass@1.77.2)(terser@5.31.0)(unocss@0.60.3(postcss@8.4.38)(rollup@4.18.0)(vite@5.2.11(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0)))(vite@5.2.11(@types/node@20.12.12)(sass@1.77.2)(terser@5.31.0))
       remark-reading-time:
         specifier: ^2.0.1
@@ -31,7 +31,7 @@ importers:
         specifier: ^1.2.2
         version: 1.2.2
       sass:
-        specifier: ^1.67.0
+        specifier: ^1.77.2
         version: 1.77.2
       vue-disqus:
         specifier: ^5.1.0
