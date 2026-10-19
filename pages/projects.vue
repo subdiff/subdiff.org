@@ -1,9 +1,12 @@
 <template>
   <section class="container default-layout">
-    <Accordion :activeIndex="getActiveIndex()" @tab-open="({ index }) => selectedProject = getProjectName(index)">
-      <AccordionTab v-for="project in data" :key="project.name" :header="project.name">
-        <ProjectCard :prjData="project" />
-      </AccordionTab>
+    <Accordion v-model:value="selectedProject">
+      <AccordionPanel v-for="project in data" :key="project.name" :value="getProjectSlug(project)">
+        <AccordionHeader>{{ project.name }}</AccordionHeader>
+        <AccordionContent>
+          <ProjectCard :prjData="project" />
+        </AccordionContent>
+      </AccordionPanel>
     </Accordion>
   </section>
 </template>
@@ -27,33 +30,38 @@ if (!data.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found', fatal: true })
 }
 
+const route = useRoute()
 const router = useRouter()
-const selectedProject = ref('')
-watch(selectedProject, (selectedProject, previous) => {
-  router.push({
-    path: '/projects',
-    query: { project: selectedProject },
-  })
-})
 
-const getProjectName = (index: number) => {
-  if (index < 0 || index > data.value!.length) {
-    return ''
-  }
-  const path = data.value!.at(index)!._path!
+const getProjectSlug = (project: any) => {
+  const path = project._path || ''
   return path.slice(path.lastIndexOf('/') + 1)
 }
 
-const getActiveIndex = () => {
-  const route = useRoute()
-  for (let i = 0; i < data.value!.length; i++) {
-    if (getProjectName(i) === route.query.project) {
-      return i
-    }
+const initialSlug = () => {
+  if (route.query.project) {
+    const found = data.value?.find(p => getProjectSlug(p) === route.query.project)
+    if (found) return getProjectSlug(found)
   }
-
-  return 0
+  return data.value?.length ? getProjectSlug(data.value[0]) : ''
 }
+
+const selectedProject = ref(initialSlug())
+
+watch(selectedProject, (newVal) => {
+  if (newVal && newVal !== route.query.project) {
+    router.push({
+      path: '/projects',
+      query: { project: newVal },
+    })
+  }
+})
+
+watch(() => route.query.project, (newProject) => {
+  if (newProject && newProject !== selectedProject.value) {
+    selectedProject.value = newProject as string
+  }
+})
 </script>
 
 <style lang="sass" scoped>
