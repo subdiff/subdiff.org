@@ -2,7 +2,7 @@
   <div class="container default-layout">
     <h1 class="title tag-title">#{{ tagTitle }}</h1>
     <div class="columns is-multiline">
-      <div class="column is-full" v-for="post of data" :key="post._id">
+      <div class="column is-full" v-for="post of data" :key="post.id || post._id">
         <BlogPostStripe :show-tags="true" :post="post" />
       </div>
     </div>
@@ -21,10 +21,12 @@ definePageMeta({
   layout: 'post'
 })
 
-const { data } = await useAsyncData(`blog-post-tags-${tagTitle}`, () => queryContent('/blog')
-  .where({ tags: { $in: tagTitle } })
-  .sort({ date: -1 })
-  .find())
+const { data } = await useAsyncData(`blog-post-tags-${tagTitle}`, async () => {
+  const allPosts = await queryCollection('blog')
+    .order('date', 'DESC')
+    .all()
+  return allPosts.filter(post => Array.isArray(post.tags) && post.tags.includes(tagTitle as string))
+})
 
 if (!data.value || data.value.length === 0) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found', fatal: true })

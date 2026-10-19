@@ -1,4 +1,3 @@
-import { serverQueryContent } from '#content/server';
 import RSS from 'rss';
 
 export default defineEventHandler(async (event) => {
@@ -8,20 +7,19 @@ export default defineEventHandler(async (event) => {
         feed_url: `https://subdiff.org/blog/feed.xml`,
     });
 
-    const docs = await serverQueryContent(event)
-        .sort({ date: -1 })
-        .where({ _partial: false })
-        .find();
+    const blogPosts = await queryCollection(event, 'blog')
+        .where('draft', '<>', true)
+        .order('date', 'DESC')
+        .all();
 
-    const blogPosts = docs.filter((doc) => doc?._path?.includes('/blog'));
     for (const doc of blogPosts) {
         feed.item({
             title: doc.title ?? '-',
-            url: `https://subdiff.org${doc._path}`,
+            url: `https://subdiff.org${doc.path}`,
             date: doc.date,
             description: doc.description,
             enclosure: {
-                'url': `https://subdiff.org${doc._path}.jpg`,
+                'url': `https://subdiff.org${doc.path}.jpg`,
                 'type': 'image/jpeg'
             }
         });

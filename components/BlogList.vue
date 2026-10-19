@@ -74,7 +74,7 @@ const props = defineProps(['pageNumber'])
 const postsPerPage = 10
 
 const allPostsCountResponse = await useAsyncData('blog-posts-all',
-  () => queryContent('/blog').count())
+  () => queryCollection('blog').count())
 
 const allPostsCount = allPostsCountResponse.data.value!
 const totalPages = Math.ceil(allPostsCount / postsPerPage)
@@ -87,11 +87,11 @@ const isFirstPage = props.pageNumber === 1
 const isLastPage = props.pageNumber === totalPages
 
 const { data } = await useAsyncData(`blog-posts-list-${props.pageNumber}`, () =>
-  queryContent('/blog')
-    .sort({ date: -1 })
+  queryCollection('blog')
+    .order('date', 'DESC')
     .skip((props.pageNumber - 1) * postsPerPage)
     .limit(postsPerPage)
-    .find()
+    .all()
 )
 
 let hasNextPage = false

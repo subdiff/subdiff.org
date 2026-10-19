@@ -29,10 +29,11 @@ const getTagPath = () => {
   return "/blog/tags/" + props.prjData.tag
 }
 
-const { data: relatedBlogPosts } = await useAsyncData(`blog-post-project-${props.prjData.name}`, () => queryContent('/blog')
-  .where({ tags: { $in: props.prjData.tag } })
-  .sort({ date: -1 })
-  .find())
+const { data: relatedBlogPosts } = await useAsyncData(`blog-post-project-${props.prjData.name}`, async () => {
+  if (!props.prjData?.tag) return []
+  const allPosts = await queryCollection('blog').order('date', 'DESC').all()
+  return allPosts.filter(post => Array.isArray(post.tags) && post.tags.includes(props.prjData.tag))
+})
 
 </script>
 

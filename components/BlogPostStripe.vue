@@ -2,13 +2,13 @@
   <div class="box box-trans post-stripe-box" @click="onCardClick">
     <div class="columns is-vcentered is-variable is-3">
       <div class="column is-3">
-        <NuxtLink :href="post._path" tabindex="-1" aria-hidden="true">
-          <img class="cropped" :src="post._path + '.jpg'" alt="Image">
+        <NuxtLink :href="postPath" tabindex="-1" aria-hidden="true">
+          <img class="cropped" :src="postPath + '.jpg'" alt="Image">
         </NuxtLink>
       </div>
       <div class="column">
         <h2 class="title is-3">
-          <NuxtLink :href="post._path" class="post-title-link">
+          <NuxtLink :href="postPath" class="post-title-link">
             {{ post.title }}
           </NuxtLink>
         </h2>
@@ -29,6 +29,7 @@ const props = defineProps<{
   post: Record<string, any>
 }>()
 
+const postPath = computed(() => props.post.path || props.post._path)
 const router = useRouter()
 
 const onCardClick = (e: MouseEvent) => {
@@ -37,9 +38,9 @@ const onCardClick = (e: MouseEvent) => {
     return
   }
   if (e.metaKey || e.ctrlKey || e.button === 1) {
-    window.open(props.post._path, '_blank')
+    window.open(postPath.value, '_blank')
   } else {
-    router.push(props.post._path)
+    router.push(postPath.value)
   }
 }
 </script>

@@ -13,7 +13,9 @@
               Roman Gilg
             </NuxtLink>
           </span>
-          — {{ data!.readingTime.text }}.
+          <span v-if="data!.readingTime?.text">
+            — {{ data!.readingTime.text }}.
+          </span>
         </div>
         <div class="tags tags-style">
           <NuxtLink class="tag is-light is-rounded" :to="tag.path" v-for="tag of getTags(data!.tags)" :key="tag.id">
@@ -35,7 +37,7 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const { data } = await useAsyncData(`blog-post-${route.path}`, () => queryContent(route.path).findOne())
+const { data } = await useAsyncData(`blog-post-${route.path}`, () => queryCollection('blog').path(route.path).first())
 
 if (!data.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page Not Found', fatal: true })

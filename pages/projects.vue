@@ -20,10 +20,10 @@ definePageMeta({
 })
 
 const { data } = await useAsyncData(`projects`, () =>
-  queryContent('/projects')
-    .where({ weight: { $gt: 0 } })
-    .sort({ weight: 1 })
-    .find()
+  queryCollection('projects')
+    .where('weight', '>', 0)
+    .order('weight', 'ASC')
+    .all()
 )
 
 if (!data.value) {
@@ -34,7 +34,7 @@ const route = useRoute()
 const router = useRouter()
 
 const getProjectSlug = (project: any) => {
-  const path = project._path || ''
+  const path = project.path || project._path || ''
   return path.slice(path.lastIndexOf('/') + 1)
 }
 

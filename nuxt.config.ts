@@ -1,5 +1,10 @@
 import { definePreset } from '@primevue/themes'
 import Lara from '@primevue/themes/lara'
+import readingTime from 'reading-time'
+
+function sluggify_to_url(text: string) {
+  return text.toLowerCase().replace(/-+/g, ' ').replace(/[^\w ]+/g, '').replace(/ +/g, '-')
+}
 
 const LaraLightBlue = definePreset(Lara, {
   semantic: {
@@ -22,6 +27,10 @@ const LaraLightBlue = definePreset(Lara, {
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   compatibilityDate: '2026-10-19',
+  future: {
+    compatibilityVersion: 4,
+  },
+  srcDir: '.',
   experimental: {
     appManifest: false,
   },
@@ -46,16 +55,29 @@ export default defineNuxtConfig({
     },
   },
   content: {
-    markdown: {
-      remarkPlugins: ['remark-reading-time'],
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-light',
+          langs: [
+            'c',
+            'cpp',
+            'yaml',
+          ],
+        },
+      },
     },
-    highlight: {
-      theme: 'github-light',
-      preload: [
-        'c',
-        'cpp',
-        'yaml',
-      ],
+  },
+  hooks: {
+    'content:file:afterParse'(ctx: any) {
+      if (ctx.collection?.name === 'blog') {
+        const id = ctx.content.path.slice(ctx.content.path.lastIndexOf('/') + 1)
+        if (id !== sluggify_to_url(ctx.content.title)) {
+          throw new Error(`Path '${id}' not sluggified from title '${ctx.content.title}'`)
+        }
+        const stats = readingTime(ctx.file?.body || '')
+        ctx.content.readingTime = { text: stats.text }
+      }
     },
   },
   plugins: ['~/plugins/click-outside.client.ts',
