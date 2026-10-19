@@ -11,8 +11,8 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ["color"]
-};
+<script setup lang="ts">
+defineProps<{
+  color?: string
+}>()
 </script>

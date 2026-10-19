@@ -1,0 +1,19 @@
+[tools]
+node = "24.22.0"
+pnpm = "10.34.7"
+
+[tasks.dev]
+description = "Start Nuxt development server"
+run = "pnpm dev"
+
+[tasks.build]
+description = "Build Nuxt production server"
+run = "pnpm build"
+
+[tasks.generate]
+description = "Prerender static site"
+run = "pnpm generate"
+
+[tasks.preview]
+description = "Preview production build"
+run = "pnpm preview"

@@ -1,21 +1,33 @@
-export const getSocialMeta = (
-    {
+export interface SocialMetaImage {
+    url?: string
+    alt?: string
+    type?: string
+    width?: number
+    height?: number
+    is_large?: boolean
+}
+
+export interface SocialMetaOptions {
+    url?: string
+    title?: string
+    descr?: string
+    type?: string
+    author?: string
+    date?: string
+    img?: SocialMetaImage
+}
+
+export const getSocialMeta = (options: SocialMetaOptions = {}) => {
+    const {
         url,
         title,
         descr,
-        type,
+        type = 'website',
         author,
         date,
-        img = {
-            url: string,
-            alt: string,
-            type: string,
-            width: number,
-            height: number,
-            is_large: boolean,
-        },
-    } = {}
-) => {
+        img = {},
+    } = options
+
     return [
         {
             property: 'og:url',
@@ -23,7 +35,7 @@ export const getSocialMeta = (
         },
         {
             property: 'og:type',
-            content: type ? type : 'website'
+            content: type
         },
         {
             property: 'og:title',
@@ -57,7 +69,7 @@ export const getSocialMeta = (
         },
         {
             property: 'og:image:type',
-            content: 'image/' + img.type
+            content: img.type ? 'image/' + img.type : undefined
         },
         {
             property: 'og:image:width',

@@ -1,18 +1,12 @@
 <template>
   <footer class="container has-text-centered has-text-grey-light footer-class default-layout">
     <slot />
-    <p class="small-note has-text-grey-light">Roman Gilg © {{ get_year() }}</p>
+    <p class="small-note has-text-grey-light">Roman Gilg © {{ currentYear }}</p>
   </footer>
 </template>
 
-<script>
-export default {
-  methods: {
-    get_year() {
-      return new Date().getFullYear();
-    }
-  }
-};
+<script setup lang="ts">
+const currentYear = new Date().getFullYear()
 </script>
 
 <style lang="sass" scoped>

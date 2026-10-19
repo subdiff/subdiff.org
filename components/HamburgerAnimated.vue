@@ -7,10 +7,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  props: ["opened"]
-};
+<script setup lang="ts">
+defineProps<{
+  opened?: boolean
+}>()
 </script>
 
 <style lang="scss" scoped>

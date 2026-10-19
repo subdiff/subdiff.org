@@ -21,9 +21,10 @@
   </NuxtLink>
 </template>
 
-<script setup>
-const showTags = true
-const props = defineProps(['post'])
+<script setup lang="ts">
+defineProps<{
+  post: Record<string, any>
+}>()
 </script>
 
 <style lang="sass" scoped>
