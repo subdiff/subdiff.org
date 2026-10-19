@@ -11,7 +11,7 @@ canonical_url: false
 description: "The KWinFT project uses Qt&nbsp;6 now and one more wlroots protocol in a crucial place. These changes continue to drive forward the technical vision of the project."
 authors: [roman-gilg]
 ---
-Since the [last status update](../2022/changes-of-substance),
+Since the [last status update](/blog/2022/changes-of-substance),
 work has continued on KWinFT to stay up-to-date with changes in the ecosystem
 and push forward our own plans.
 

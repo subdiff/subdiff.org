@@ -14,7 +14,7 @@ as an alternative to the KDE default compositor KWin.
 In 2022 it has experienced some larger changes, for better and for worse."
 authors: [roman-gilg]
 ---
-Since the [last status update](more-wlroots-with-kwinft-524) on the KWinFT project
+Since the [last status update](/blog/2022/more-wlroots-with-kwinft-524) on the KWinFT project
 several months have passed already.
 There were two releases since then and a lot of the internal technology has changed.
 I am very happy about these changes since many of the biggest milestones,
@@ -102,7 +102,7 @@ KWin's internal representation of windows had become an unbearable mess featurin
 In many aspects this structure failed basic principles of object-oriented design hygiene.
 
 This had been identified as a major problem
-[early on](../2021/the-windowing-revolution#flattening-the-hierarchy)
+[early on](/blog/2021/the-windowing-revolution#flattening-the-hierarchy)
 in KWinFT's development and over the years has been steadily improved.
 Recently we see improvements to this [in KWin](https://invent.kde.org/plasma/kwin/-/merge_requests/2250) too
 by reducing the number of inheritance levels.

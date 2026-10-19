@@ -13,7 +13,7 @@ canonical_url: false
 description: "One of my project ideas got accepted to Google Summer of Code and I now have the opportunity to work on a very interesting project concerning Xwayland for the X.Org Foundation."
 authors: [roman-gilg]
 ---
-There is a saying that persistence is the key to success. Not that I'm always following this advice, but I did luckily earlier this year when I had to decide if I wanted to apply again for a [Google Summer of Code][gsoc] (GSoC) spot after my application in the last year was rejected by my organisation of choice back then. I talked about it in [one](../2016/kde-what-have-i-done) of my last posts. Anyway, thanks to being persistent this year one of my project ideas got accepted and I now have the opportunity to work on a very interesting project concerning Xwayland, this time for the X.Org Foundation.
+There is a saying that persistence is the key to success. Not that I'm always following this advice, but I did luckily earlier this year when I had to decide if I wanted to apply again for a [Google Summer of Code][gsoc] (GSoC) spot after my application in the last year was rejected by my organisation of choice back then. I talked about it in [one](/blog/2016/kde-what-have-i-done) of my last posts. Anyway, thanks to being persistent this year one of my project ideas got accepted and I now have the opportunity to work on a very interesting project concerning Xwayland, this time for the X.Org Foundation.
 
 The [project][gsoc-project] is kind of difficult though. At least it feels this way to me right now, after I've already spent quite some time on digging into it and getting a feel for it.
 

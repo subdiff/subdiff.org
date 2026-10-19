@@ -15,7 +15,7 @@ canonical_url: false
 description: "After last week's overview of XWayland we will dig deeper this time into the inner workings of XWayland."
 authors: [roman-gilg]
 ---
-Last week in [part one](../2017/understanding-xwayland-part-1-of-2) of this two part series about the fundamentals of Xwayland, we treated Xwayland like a black box. We stated what its purpose is and gave a rough overview on how it connects to its environment, notably its clients and the Wayland compositor. In a sense this was only a teaser, since we didn't yet look at Xwayland's inner workings. So welcome to part two, where we do a deep dive into its code base!
+Last week in [part one](/blog/2017/understanding-xwayland-part-1-of-2) of this two part series about the fundamentals of Xwayland, we treated Xwayland like a black box. We stated what its purpose is and gave a rough overview on how it connects to its environment, notably its clients and the Wayland compositor. In a sense this was only a teaser, since we didn't yet look at Xwayland's inner workings. So welcome to part two, where we do a deep dive into its code base!
 
 You can find the Xwayland code base [here][xserver-code]. Maybe to your surprise this is just the code of X.org's Xserver, which we will just refer to as *the Xserver* in the rest of this text. But as a reminder from part one: Xwayland is only a normal Xserver "with a special backend written to communicate with the Wayland compositor active on your system." This backend is located in [`/hw/xwayland`][xserver-code-xwayland]. To understand why we find this special backend here and what I mean with an Xserver backend at all, we have to first learn some Xserver fundamentals.
 

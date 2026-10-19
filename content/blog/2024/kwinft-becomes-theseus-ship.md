@@ -19,10 +19,10 @@ as part of the *WinFT* family of open-source products.
 
 ## Release Together With KDE Plasma 6
 It was a hard grind, but I managed to put together a first experimental release of the compositor,
-fully [ported to Qt 6](../2023/qt-6-and-more-big-changes-to-kwinft),
+fully [ported to Qt 6](/blog/2023/qt-6-and-more-big-changes-to-kwinft),
 and working in combination with Plasma 6.
 
-Looking back, now nearly four years ago KWinFT was [publically announced](../2020/the-kwinft-project).
+Looking back, now nearly four years ago KWinFT was [publically announced](/blog/2020/the-kwinft-project).
 In these four years a lot has happened.
 
 Initially, KWinFT was more of an experiment, exploring the development of KWin beyond the confines of the unwritten KDE development rules - and with the hopes of merging it back one day.

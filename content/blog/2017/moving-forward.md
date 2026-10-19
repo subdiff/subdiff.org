@@ -13,7 +13,7 @@ canonical_url: false
 description: "I reworked this week huge parts of my code and I have a feeling that I'm on the right track. I wrote a second mail to the xorg-devel mailing list and the feedback I got back was also way more positive than on the first try."
 authors: [roman-gilg]
 ---
-I reworked this week huge parts of my code and I have a feeling that I'm on the right track. I wrote a second [mail][xorg-devel-ml-thread2] to the xorg-devel mailing list and the feedback I got back was also way more positive than on the first [try](../2017/a-new-beginning). Thanks again to Michel Dänzer for taking the time for this.
+I reworked this week huge parts of my code and I have a feeling that I'm on the right track. I wrote a second [mail][xorg-devel-ml-thread2] to the xorg-devel mailing list and the feedback I got back was also way more positive than on the first [try](/blog/2017/a-new-beginning). Thanks again to Michel Dänzer for taking the time for this.
 
 In the mail I described my current approach in detail. Basically I created a second code path in the Present DIX for DDX with the possibility to flip windows individually, like Xwayland is capable of doing it. In this code path I also changed the Present extension so that it will only ever signal the client that a certain used pixmap is able to be reused when the DDX has also given it free. In the Xwayland case it does this of course when the Wayland buffer associated with the pixmap has been released by the Wayland server.
 

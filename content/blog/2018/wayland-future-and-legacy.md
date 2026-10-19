@@ -15,7 +15,7 @@ canonical_url: false
 description: "Plasma 5.14 is right around the corner, time to write again an update like I did for 5.13 on what was achieved in terms of Wayland and what is in the work."
 authors: [roman-gilg]
 ---
-Plasma 5.14 is right around the corner, time to write again an update like I did [for 5.13](./progress-on-plasma-wayland-for-513) on what was achieved in terms of Wayland and what is in the work.
+Plasma 5.14 is right around the corner, time to write again an update like I did [for 5.13](/blog/2018/progress-on-plasma-wayland-for-513) on what was achieved in terms of Wayland and what is in the work.
 
 ### On Blocking and Reprioritizing Work
 First I directly admit on what I did teaser for 5.14 in my last update but what will not make it: generic gamma color correction per display. There are two reasons for it. The first one is that some [preliminary][phab-gamma-patch] [patches][phab-outputs-patch], which needed to be merged first, endured long review phases. The second reason is, that when these patches finally were accepted I had shifted my focus on some other topics, which I decided to give an higher priority.

@@ -13,7 +13,7 @@ canonical_url: false
 description: "After receiving negative feedback in regards to my code I decided to start over. Read here to learn more."
 authors: [roman-gilg]
 ---
-What is the worst thing, that can happen to someone's work? Probably showing it to someone and he isn't impressed at all by it. Guess, what happened to me! I said in the [last post](../2017/a-small-update), that I wanted to reach out to the good people from the xorg-devel mailing list for some feedback on my work so far. I [did][xorg-devel-ml-thread], but the response wasn't [that][xorg-devel-ml-answer1] [reassuring][xorg-devel-ml-answer2].
+What is the worst thing, that can happen to someone's work? Probably showing it to someone and he isn't impressed at all by it. Guess, what happened to me! I said in the [last post](/blog/2017/a-small-update), that I wanted to reach out to the good people from the xorg-devel mailing list for some feedback on my work so far. I [did][xorg-devel-ml-thread], but the response wasn't [that][xorg-devel-ml-answer1] [reassuring][xorg-devel-ml-answer2].
 
 Basically several fundamental parts of my code were questioned. OK, the problem of timings with the frame callback was easily to solve - just don't do it for now, it's not really necessary. But the problems pointed out by Michel had a more profound impact. How I should deal with the Present extension and what was requested by Michel couldn't easily be integrated in the code I had written.
 

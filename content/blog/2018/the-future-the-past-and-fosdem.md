@@ -17,7 +17,7 @@ authors: [roman-gilg]
 Long time no see, something had happened for sure. So let's begin with that.
 
 ### The Past
-My [last post](../2017/preparing-patches) was from 25th August 2017. It was about my GSoC project and how I was preparing the final patch set, that would then be posted to the xorg-devel mailing list.
+My [last post](/blog/2017/preparing-patches) was from 25th August 2017. It was about my GSoC project and how I was preparing the final patch set, that would then be posted to the xorg-devel mailing list.
 
 That's quite some time ago and I also didn't follow up on what exactly happened now with the patch set.
 
