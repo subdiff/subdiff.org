@@ -21,9 +21,9 @@
               @after-leave="upButtonCleanedUp = true; scrolledDownAtStart = false;"
               @before-enter="upButtonCleanedUp = false">
               <div v-if="scrolledDown && !dropDownActive && titleCleanedUp" class="column">
-                <NuxtLink style="margin-left: 14px">
+                <a style="margin-left: 14px; cursor: pointer" role="button" aria-label="Scroll to top">
                   <img v-scroll-to="{ element: 'body' }" src="/logo.png" width="35" />
-                </NuxtLink>
+                </a>
               </div>
             </Transition>
 

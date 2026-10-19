@@ -10,7 +10,7 @@ $navbar-breakpoint: 350px
 
 $pagination-current-background-color: #4263b9
 $pagination-current-border-color: #4263b9
-@import "../node_modules/bulma/bulma.sass"
+@import "bulma/bulma.sass"
 
 .default-layout
   max-width: 900px !important
