@@ -149,6 +149,8 @@ onMounted(() => {
 .bar-style
   height: 60px
   padding: 5px 0 5px 0
+  margin-left: -0.75rem
+  margin-right: -0.75rem
   background-color: white
   overflow: auto
   position: relative

@@ -5,17 +5,29 @@
   </NuxtLayout>
 </template>
 
-<style lang="sass">
-$navbar-breakpoint: 350px
+<style lang="scss">
+:root {
+  --color-brand-primary: #4263b9;
+  --bulma-success-invert-l: 100%;
+}
 
-$pagination-current-background-color: #4263b9
-$pagination-current-border-color: #4263b9
-@import "bulma/bulma.sass"
+.button.is-success {
+  color: #fff;
+}
 
-.default-layout
-  max-width: 900px !important
-  padding: 0 20px 0 20px
 
-.main-slot
-  margin-top: 100px
+.default-layout {
+  max-width: 900px !important;
+  padding: 0 20px 0 20px;
+}
+
+.main-slot {
+  margin-top: 100px;
+}
+
+.pagination-link.is-current {
+  background-color: var(--color-brand-primary);
+  border-color: var(--color-brand-primary);
+}
 </style>
+

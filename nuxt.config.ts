@@ -29,12 +29,16 @@ export default defineNuxtConfig({
   ],
   app: {
     head: {
+      htmlAttrs: {
+        'data-theme': 'light'
+      },
       link: [
         { rel: "icon", type: "image/png", href: "/logo.png" }
       ]
     }
   },
   css: [
+    "bulma/css/versions/bulma-no-dark-mode.min.css",
     "primevue/resources/themes/lara-light-blue/theme.css"
   ],
   build: {
