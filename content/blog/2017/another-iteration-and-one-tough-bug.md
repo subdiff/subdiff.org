@@ -1,6 +1,6 @@
 ---
 title: "Another Iteration and One Tough Bug"
-date: 2017-08-11 23:30:00
+date: 2017-08-11T23:30:00
 tags:
   - coding
   - gsoc

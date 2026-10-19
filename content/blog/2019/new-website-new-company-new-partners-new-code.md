@@ -1,6 +1,6 @@
 ---
 title: "New Website, New Company, New Partners, New Code"
-date: 2019-06-21 10:00:00
+date: 2019-06-21T10:00:00
 tags:
   - internal affairs
   - plasma

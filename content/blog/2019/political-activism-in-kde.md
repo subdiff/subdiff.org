@@ -1,6 +1,6 @@
 ---
 title: "Political Activism in KDE"
-date: 2019-09-22 13:00:00
+date: 2019-09-22T13:00:00
 tags:
   - kde
   - politics

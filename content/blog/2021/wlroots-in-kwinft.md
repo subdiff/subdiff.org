@@ -1,6 +1,6 @@
 ---
 title: "wlroots in KWinFT"
-date: 2021-07-16 13:00:00
+date: 2021-07-16T13:00:00
 tags:
 - kwinft
 - wlroots

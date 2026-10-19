@@ -1,6 +1,6 @@
 ---
 title: "KWinFT Project 5.20 Released"
-date: 2020-10-15 15:00:00
+date: 2020-10-15T15:00:00
 tags:
  - kwinft
  - disman

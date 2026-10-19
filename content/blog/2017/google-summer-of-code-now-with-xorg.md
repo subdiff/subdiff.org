@@ -1,6 +1,6 @@
 ---
 title: "Google Summer of Code - now with X.Org"
-date: 2017-06-16 12:00:00
+date: 2017-06-16T12:00:00
 tags:
   - coding
   - gsoc

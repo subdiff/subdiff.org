@@ -1,6 +1,6 @@
 ---
 title: "More wlroots with KWinFT 5.24"
-date: 2022-02-08 21:00:00
+date: 2022-02-08T21:00:00
 tags:
 - kwinft
 - wlroots

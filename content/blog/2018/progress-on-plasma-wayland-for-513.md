@@ -1,6 +1,6 @@
 ---
 title: "Progress on Plasma Wayland for 5.13"
-date: 2018-04-21 23:30:00
+date: 2018-04-21T23:30:00
 tags:
   - kde
   - plasma

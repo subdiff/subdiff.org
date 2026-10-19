@@ -1,7 +1,7 @@
 ---
 title: "FDBuild 0.1 Released"
 draft: false
-date: 2023-10-11 16:00:00
+date: 2023-10-11T16:00:00
 tags:
 - fdbuild
 - tooling

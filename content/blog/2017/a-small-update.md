@@ -1,6 +1,6 @@
 ---
 title: "A Small Update"
-date: 2017-07-21 21:00:00
+date: 2017-07-21T21:00:00
 tags:
   - coding
   - gsoc

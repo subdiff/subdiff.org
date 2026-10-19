@@ -1,6 +1,6 @@
 ---
 title: "The KWinFT Project"
-date: 2020-04-15 23:00:00
+date: 2020-04-15T23:00:00
 tags:
  - kde
  - kwayland

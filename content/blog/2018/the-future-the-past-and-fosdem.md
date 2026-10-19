@@ -1,6 +1,6 @@
 ---
 title: "The Future, the Past and FOSDEM"
-date: 2018-02-02 22:30:00
+date: 2018-02-02T22:30:00
 tags:
   - gsoc
   - freedesktop

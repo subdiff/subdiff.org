@@ -1,6 +1,6 @@
 ---
 title: "In the Second Year of KWinFT"
-date: 2021-06-13 12:00:00
+date: 2021-06-13T12:00:00
 tags:
 - kwinft
 series: false

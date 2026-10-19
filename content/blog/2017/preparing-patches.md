@@ -1,6 +1,6 @@
 ---
 title: "Preparing Patches"
-date: 2017-08-25 23:30:00
+date: 2017-08-25T23:30:00
 tags:
   - coding
   - gsoc

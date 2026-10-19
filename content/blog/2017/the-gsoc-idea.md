@@ -1,6 +1,6 @@
 ---
 title: "The GSoC Idea"
-date: 2017-07-07 16:00:00
+date: 2017-07-07T16:00:00
 tags:
   - coding
   - gsoc

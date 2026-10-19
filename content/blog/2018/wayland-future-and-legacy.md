@@ -1,6 +1,6 @@
 ---
 title: "Wayland Future and Legacy"
-date: 2018-09-25 12:00:00
+date: 2018-09-25T12:00:00
 tags:
   - dnd
   - input

@@ -1,6 +1,6 @@
 ---
 title: "Changes of Substance"
-date: 2022-11-22 14:00:00
+date: 2022-11-22T14:00:00
 tags:
 - kwinft
 - open source

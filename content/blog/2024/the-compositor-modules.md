@@ -2,7 +2,7 @@
 title: "The Compositor Modules"
 draft: false
 disable_comments: true
-date: 2024-03-04 18:00:00
+date: 2024-03-04T18:00:00
 tags:
 - como
 - winft

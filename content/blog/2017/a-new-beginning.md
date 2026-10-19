@@ -1,6 +1,6 @@
 ---
 title: "A New Beginning"
-date: 2017-07-28 22:00:00
+date: 2017-07-28T22:00:00
 tags:
   - coding
   - gsoc

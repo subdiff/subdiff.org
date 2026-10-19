@@ -1,6 +1,6 @@
 ---
 title: "Representing KDE at XDC 2018"
-date: 2018-10-31 11:00:00
+date: 2018-10-31T11:00:00
 tags:
   - xorg
   - freedesktop

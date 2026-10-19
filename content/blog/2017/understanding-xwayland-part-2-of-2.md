@@ -1,6 +1,6 @@
 ---
 title: "Understanding Xwayland - Part 2 of 2"
-date: 2017-06-30 16:00:00
+date: 2017-06-30T16:00:00
 tags:
   - coding
   - gsoc

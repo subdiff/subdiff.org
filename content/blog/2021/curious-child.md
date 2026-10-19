@@ -1,6 +1,6 @@
 ---
 title: "Curious Child"
-date: 2021-02-28 22:00:00
+date: 2021-02-28T22:00:00
 tags:
 - kwinft
 - windowing

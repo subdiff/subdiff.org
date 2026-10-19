@@ -1,7 +1,7 @@
 ---
 title: "KWinFT Becomes Theseus' Ship"
 draft: false
-date: 2024-02-27 12:00:00
+date: 2024-02-27T12:00:00
 tags:
 - github
 - kwinft

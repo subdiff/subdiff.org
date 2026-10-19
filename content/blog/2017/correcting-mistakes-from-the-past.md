@@ -1,6 +1,6 @@
 ---
 title: "Correcting Mistakes From the Past"
-date: 2017-05-20 13:00:00
+date: 2017-05-20T13:00:00
 published: true
 tags:
   - coding

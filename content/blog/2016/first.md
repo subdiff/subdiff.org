@@ -1,6 +1,6 @@
 ---
 title: "First!"
-date: 2016-08-23 19:43:00
+date: 2016-08-23T19:43:00
 published: true
 tags: ['internal affairs']
 series: false

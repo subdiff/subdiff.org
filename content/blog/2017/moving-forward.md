@@ -1,6 +1,6 @@
 ---
 title: "Moving Forward"
-date: 2017-08-04 21:00:00
+date: 2017-08-04T21:00:00
 tags:
   - coding
   - gsoc

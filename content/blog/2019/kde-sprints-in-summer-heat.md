@@ -1,6 +1,6 @@
 ---
 title: "KDE Sprints in Summer Heat"
-date: 2019-08-18 20:00:00
+date: 2019-08-18T20:00:00
 tags:
   - kde
   - plasma

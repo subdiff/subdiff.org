@@ -1,6 +1,6 @@
 ---
 title: "End In Sight"
-date: 2017-08-18 23:30:00
+date: 2017-08-18T23:30:00
 tags:
   - coding
   - gsoc

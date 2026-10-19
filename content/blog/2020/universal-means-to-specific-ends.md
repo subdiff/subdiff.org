@@ -1,6 +1,6 @@
 ---
 title: "Universal Means to Specific Ends"
-date: 2020-09-25 20:00:00
+date: 2020-09-25T20:00:00
 tags:
  - kwinft
  - disman

@@ -1,6 +1,6 @@
 ---
 title: "Difficulties and Success Stories"
-date: 2017-07-14 20:00:00
+date: 2017-07-14T20:00:00
 tags:
   - coding
   - gsoc

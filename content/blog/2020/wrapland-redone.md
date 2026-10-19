@@ -1,6 +1,6 @@
 ---
 title: "Wrapland Redone"
-date: 2020-05-25 10:00:00
+date: 2020-05-25T10:00:00
 tags:
  - kwinft
  - wrapland

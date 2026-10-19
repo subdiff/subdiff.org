@@ -1,6 +1,6 @@
 ---
 title: "KDE! What Have I Done?"
-date: 2016-12-26 12:00:00
+date: 2016-12-26T12:00:00
 published: true
 tags:
   - coding

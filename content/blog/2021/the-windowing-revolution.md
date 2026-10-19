@@ -1,6 +1,6 @@
 ---
 title: "The Windowing Revolution"
-date: 2021-02-08 20:00:00
+date: 2021-02-08T20:00:00
 tags:
 - kwinft
 - windowing

@@ -1,6 +1,6 @@
 ---
 title: "Window Kindergarten"
-date: 2021-02-19 15:00:00
+date: 2021-02-19T15:00:00
 tags:
 - kwinft
 - windowing

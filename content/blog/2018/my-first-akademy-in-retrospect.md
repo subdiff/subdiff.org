@@ -1,6 +1,6 @@
 ---
 title: "My First Akademy in Retrospect"
-date: 2018-09-09 11:00:00
+date: 2018-09-09T11:00:00
 tags:
   - kde
   - conference
